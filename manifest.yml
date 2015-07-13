@@ -1,0 +1,6 @@
+---
+applications:
+- name: sample-aspnet5-helloworld
+  random-route: true
+  memory: 256M
+  buildpack: https://github.com/cloudfoundry-community/asp.net5-buildpack
