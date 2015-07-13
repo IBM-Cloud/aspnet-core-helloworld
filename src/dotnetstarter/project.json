@@ -1,0 +1,29 @@
+{
+    "webroot": "wwwroot",
+
+    "dependencies": {
+        "Kestrel": "1.0.0-beta4",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta4",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta4",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta4"
+    },
+
+    "commands": {
+        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004",
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5001"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    },
+
+    "exclude": [
+        "wwwroot"
+    ],
+    "publishExclude": [
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ]
+}
