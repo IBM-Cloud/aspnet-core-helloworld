@@ -1,6 +1,6 @@
-# asp.net5-helloworld
+# ASP .NET 5 Hello World
 
-Sample application for the Cloud Foundry [ASP.NET 5 buildpack][].
+A simple ASP.NET 5 application for Bluemix [ASP.NET 5 buildpack][].
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 
