@@ -6,3 +6,4 @@ bin/
 *.xproj.user
 README.md
 project.lock.json
+Properties/
