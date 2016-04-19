@@ -1,5 +1,7 @@
 .vs/
+.vscode/
 artifacts/
+obj/
 bin/
 *.xproj.user
 project.lock.json
