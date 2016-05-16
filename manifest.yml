@@ -1,5 +1,5 @@
 ---
 applications:
-- name: sample-aspnet5-helloworld
+- name: sample-aspnetcore-helloworld
   random-route: true
   memory: 256M
