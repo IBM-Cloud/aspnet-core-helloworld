@@ -1,8 +1,9 @@
 .vs/
+.vscode/
 artifacts/
 bin/
+obj/
 *.sln
-*.xproj
 *.xproj.user
 README.md
 project.lock.json
