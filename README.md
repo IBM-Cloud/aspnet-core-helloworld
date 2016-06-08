@@ -1,4 +1,4 @@
-# ASP .NET Core Hello World
+# ASP.NET Core Hello World
 
 A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 
