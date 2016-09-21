@@ -1,3 +1,6 @@
+## Sept 21, 2016
+- Update sample to use .NET Core 1.0.1
+
 ## May 16, 2016
 - Update sample to use Dotnet CLI
 
