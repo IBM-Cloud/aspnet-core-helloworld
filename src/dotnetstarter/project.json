@@ -9,17 +9,16 @@
     },
 
     "publishOptions": {
-        "include": [ "wwwroot" ],
-        "exclude": [ "**.user", "**.vspscc" ]
+        "include": [ "wwwroot" ]
     },
 
     "dependencies": {
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
-        "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-        "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.2",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.1",
+        "Microsoft.Extensions.Configuration.CommandLine": "1.0.1",
         "Microsoft.NETCore.App": {
             "type": "platform",
-            "version": "1.0.1"
+            "version": "1.0.3"
         }
     },
 
@@ -33,5 +32,5 @@
 
     "scripts": { },
 
-    "version": "1.0.1"
+    "version": "1.0.3"
 }
