@@ -1,4 +1,4 @@
-# ASP.NET Core Hello World
+# ASP.NET Core Hello World Sample
 
 A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 
@@ -7,8 +7,7 @@ A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 ## Run the app locally
 
 1. Install ASP.NET Core by following the [Getting Started][] instructions
-+ Clone this app
-+ cd into the app directory and then `src/dotnetstarter`
++ cd into this project's root directory, then `src/dotnetstarter`
 + Run `dotnet restore`
 + Run `dotnet run`
 + Access the running app in a browser at [http://localhost:5000](http://localhost:5000)
