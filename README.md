@@ -10,7 +10,7 @@ A simple ASP.NET Core web application for the [ASP.NET Core buildpack][].
 + cd into this project's root directory, then `src/dotnetstarter`
 + Run `dotnet restore`
 + Run `dotnet run`
-+ Access the running app in a browser at [http://localhost:5000](http://localhost:5000)
++ Access the running app in a browser at <http://localhost:5000>
 
 [Getting Started]: http://docs.asp.net/en/latest/getting-started/index.html
 [ASP.NET Core buildpack]: https://github.com/cloudfoundry-incubator/dotnet-core-buildpack
