@@ -8,7 +8,7 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": [ "src/dotnetstarter", "--no-incremental" ],
+            "args": [ "src/WebApplication", "--no-incremental" ],
             "isBuildCommand": true,
             "showOutput": "always",
             "problemMatcher": "$msCompile"

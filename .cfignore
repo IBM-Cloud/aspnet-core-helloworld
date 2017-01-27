@@ -1,6 +1,5 @@
 .vs/
 .vscode/
-artifacts/
 bin/
 obj/
 *.sln
