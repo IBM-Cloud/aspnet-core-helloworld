@@ -2,4 +2,6 @@
 applications:
 - name: sample-aspnetcore-helloworld
   random-route: true
-  memory: 512M
+  memory: 256M
+  env:
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
