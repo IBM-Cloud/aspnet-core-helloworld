@@ -1,5 +1,4 @@
 .vs/
 obj/
 bin/
-*.xproj.user
-project.lock.json
+*.csproj.user

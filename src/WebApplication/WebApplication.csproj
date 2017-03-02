@@ -1,9 +1,9 @@
-﻿<Project ToolsVersion="15.0">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <VersionPrefix>1.0.3</VersionPrefix>
     <TargetFramework>netcoreapp1.0</TargetFramework>
+    <RuntimeFrameworkVersion>1.0.3</RuntimeFrameworkVersion>
     <DebugType>portable</DebugType>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>WebApplication</AssemblyName>
@@ -11,27 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\**\*;**\*.cshtml;appsettings.json;web.config">
+    <Content Update="**\*.cshtml;appsettings.json;web.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\**\*;**\*.cshtml;appsettings.json;web.config">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk.Web">
-      <Version>1.0.0-alpha-20161104-2-112</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.App" Version="1.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="1.0.1" />
@@ -39,7 +27,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.1" />
   </ItemGroup>
 
@@ -54,12 +41,6 @@
       </Content>
     </ItemGroup>
   </Target>
-
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
-  </PropertyGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild;BeforePublish;">
     <Exec Command="dotnet bundle" />
