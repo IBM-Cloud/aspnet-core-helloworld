@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <VersionPrefix>1.0.3</VersionPrefix>
+    <VersionPrefix>1.0.5</VersionPrefix>
     <TargetFramework>netcoreapp1.0</TargetFramework>
-    <RuntimeFrameworkVersion>1.0.3</RuntimeFrameworkVersion>
     <DebugType>portable</DebugType>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>WebApplication</AssemblyName>
@@ -11,27 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Update="**\*.cshtml;appsettings.json;web.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App" Version="1.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.2.301" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.*" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.*" />
   </ItemGroup>
 
   <Target Name="AddWwwRoot" BeforeTargets="AssignTargetPaths" DependsOnTargets="BeforeBuild;BeforePublish">
@@ -41,6 +24,10 @@
       </Content>
     </ItemGroup>
   </Target>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.4.*" />
+  </ItemGroup>
 
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild;BeforePublish;">
     <Exec Command="dotnet bundle" />
