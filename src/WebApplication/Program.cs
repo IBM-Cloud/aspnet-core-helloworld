@@ -1,5 +1,5 @@
-﻿using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
+using System;
 
 namespace WebApplication
 {
@@ -10,7 +10,7 @@ namespace WebApplication
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseStartup<Startup>()
-                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseContentRoot(AppContext.BaseDirectory)
                 .Build();
             host.Run();
         }

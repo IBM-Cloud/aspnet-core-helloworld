@@ -19,7 +19,7 @@
 
   <Target Name="AddWwwRoot" BeforeTargets="AssignTargetPaths" DependsOnTargets="BeforeBuild;BeforePublish">
     <ItemGroup>
-      <Content Include="wwwroot\**">
+      <Content Include="wwwroot\**;**\*.cshtml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
