@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
 namespace WebApplication
@@ -8,9 +8,10 @@ namespace WebApplication
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
-                        .UseKestrel()
-                        .UseStartup<Startup>()
-                        .Build();
+                .UseKestrel()
+                .UseStartup<Startup>()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .Build();
             host.Run();
         }
     }
