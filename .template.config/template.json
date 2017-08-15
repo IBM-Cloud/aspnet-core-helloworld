@@ -1,0 +1,12 @@
+{
+    "author": "IBM",
+    "classifications": [ "Web" ],
+    "name": "Bluemix Web Starter",
+    "identity": "Bluemix.HelloWorldMVC",
+    "shortName": "bluemixmvc",
+    "tags": {
+        "language": "C#"
+    },
+    "sourceName": "WebApplication",
+    "preferNameDirectory" : "true"
+}
