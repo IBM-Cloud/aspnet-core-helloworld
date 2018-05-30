@@ -8,6 +8,15 @@
     <AssemblyName>WebApplication</AssemblyName>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
+   
+   <PropertyGroup>
+    <VersionPrefix>1.1.0</VersionPrefix>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <DebugType>portable</DebugType>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>WebApplication</AssemblyName>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.0.*" />
