@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using System;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
-namespace WebApplication
+namespace dotnetHelloWorld
 {
     public class Program
     {
@@ -9,8 +10,8 @@ namespace WebApplication
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseContentRoot(AppContext.BaseDirectory)
                 .Build();
             host.Run();
         }

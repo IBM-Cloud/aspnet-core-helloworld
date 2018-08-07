@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using dotnetHelloWorld.Models;
+using System;
+using Newtonsoft.Json;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 public class Startup
 {
@@ -14,14 +20,13 @@ public class Startup
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-            .AddEnvironmentVariables();
+            .AddJsonFile("vcap-local.json", optional:true); // when running locally, store VCAP_SERVICES credentials in vcap-local.json
 
         Configuration = builder.Build();
     }
 
     public void ConfigureServices(IServiceCollection services)
     {
-        // Add framework services.
         services.AddMvc();
     }
 

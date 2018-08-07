@@ -1,6 +1,6 @@
 ---
 applications:
-- name: sample-aspnetcore-helloworld
+- name: dotnetHelloWorld
   random-route: true
   memory: 512M
   env:
