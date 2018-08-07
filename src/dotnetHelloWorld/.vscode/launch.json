@@ -6,17 +6,20 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.0/WebApplication.dll",
+            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.0/dotnetHelloWorld.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "sourceFileMap": {
+                "/Views": "${workspaceRoot}/Views"
+            }
         },
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.0/WebApplication.dll",
+            "program": "${workspaceRoot}/bin/Debug/netcoreapp1.0/dotnetHelloWorld.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
@@ -33,6 +36,9 @@
                 "linux": {
                     "command": "xdg-open"
                 }
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceRoot}/Views"
             }
         }
     ]
