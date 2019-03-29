@@ -1,36 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <VersionPrefix>2.0</VersionPrefix>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <DebugType>portable</DebugType>
-    <PreserveCompilationContext>true</PreserveCompilationContext>
-    <AssemblyName>dotnetHelloWorld</AssemblyName>
-    <OutputType>Exe</OutputType>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <NoWarn>$(NoWarn);NU1605</NoWarn>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Models\Settings.cs" />
-  </ItemGroup>
-
-  <Target Name="AddWwwRoot" BeforeTargets="AssignTargetPaths" DependsOnTargets="BeforeBuild;BeforePublish">
-    <ItemGroup>
-      <Content Include="wwwroot\**" CopyToOutputDirectory="Always" />
-    </ItemGroup>
-  </Target>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>
